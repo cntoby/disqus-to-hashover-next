@@ -69,24 +69,25 @@ public class DisqusToHashOver {
         outputFile = new File(hashOverDir, Integer.toString(++count) + ".xml");
       }
 
-      // Convert post date format to e.g. 02/23/2017 - 2:37pm
+      // Convert post date format to e.g. 2017-04-24T19:38:07-0700
       XMLGregorianCalendar pd = p.getCreatedAt();
-      int hour = pd.getHour();
-      String suffix = "am";
-      if (hour >= 12) {
-        suffix = "pm";
-      }
-      if (hour >= 13) {
-        hour -= 12;
-      }
-      if (hour == 0) {
-        hour = 12;
-      }
-      String postDateString = String.format("%02d", pd.getMonth()) + "/"
-              + String.format("%02d", pd.getDay()) + "/"
-              + String.format("%04d", pd.getYear()) + " - "
-              + hour + ":"
-              + String.format("%02d", pd.getMinute()) + suffix;
+//      int hour = pd.getHour();
+//      String suffix = "am";
+//      if (hour >= 12) {
+//        suffix = "pm";
+//      }
+//      if (hour >= 13) {
+//        hour -= 12;
+//      }
+//      if (hour == 0) {
+//        hour = 12;
+//      }
+//      String postDateString = String.format("%02d", pd.getMonth()) + "/"
+//              + String.format("%02d", pd.getDay()) + "/"
+//              + String.format("%04d", pd.getYear()) + " - "
+//              + hour + ":"
+//              + String.format("%02d", pd.getMinute()) + suffix;
+        String postDateString = pd.toString();
 
       // Build the file content to write
       String fileContent = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n"
