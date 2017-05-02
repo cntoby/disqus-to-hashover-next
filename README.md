@@ -9,5 +9,5 @@ Released under the terms of the BSD 2-clause licence.
 
 ## updates of this fork
 
-  1. migrate to [hashover-next](https://github.com/jacobwb/hashover-next)
+  1. migrate to [hashover-next, 2.0](https://github.com/jacobwb/hashover-next)
   2. fix gravatar support(added email hash)
